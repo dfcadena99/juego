@@ -1,0 +1,32 @@
+ZOMBRAX: Operación Punto Ciego - App de Android
+================================================
+
+ARCHIVOS
+- ../zombrax.apk ............ la app lista para instalar en el teléfono.
+- zombrax.keystore .......... llave con la que se firma la app. ¡NO LA PIERDAS!
+                              Cada versión nueva debe firmarse con esta misma llave
+                              para instalarse como actualización encima de la anterior.
+                              No la subas a un repositorio público.
+- proyecto-android.zip ...... proyecto de la app (pantalla completa, horizontal,
+                              botón atrás, ícono). El juego va en assets/index.html
+                              y el motor 3D en assets/three.min.js.
+
+DATOS DE LA LLAVE
+- Alias: zombrax
+- Contraseña (almacén y llave): Zombrax-2026
+- Paquete de la app: com.zombrax.juego
+
+CÓMO INSTALAR EN EL TELÉFONO
+1. Pasa zombrax.apk al teléfono (WhatsApp, Drive, cable o descargándolo).
+2. Ábrelo desde Descargas o Archivos y pulsa Instalar.
+3. Si Android lo pide, permite "Instalar apps desconocidas" para esa aplicación
+   (Chrome, Archivos, WhatsApp...). Como no viene de Play Store, Play Protect
+   puede mostrar un aviso: elige "Instalar de todas formas".
+
+CÓMO SE ARMA UNA VERSIÓN NUEVA (Java + Apktool + uber-apk-signer)
+1. Copia el index.html nuevo a assets/index.html cambiando la línea del motor 3D
+   https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js  ->  three.min.js
+2. En apktool.yml sube versionCode (2, 3, ...) y versionName.
+3. java -jar apktool.jar b apkproj -o zombrax-unsigned.apk
+4. java -jar uber-apk-signer.jar -a zombrax-unsigned.apk --ks zombrax.keystore
+     --ksAlias zombrax --ksPass Zombrax-2026 --ksKeyPass Zombrax-2026
