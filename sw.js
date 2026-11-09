@@ -1,6 +1,6 @@
 // Service worker de ZOMBRAX: guarda el juego en el teléfono para abrirlo rápido y sin conexión.
 // Al publicar una actualización del juego, cambia el número de VERSION para que los teléfonos la descarguen.
-const VERSION = 'zombrax-v6';
+const VERSION = 'zombrax-v7';
 const ARCHIVOS = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png', './icon-maskable-512.png'];
 const MOTOR3D = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
 

@@ -2,7 +2,7 @@ ZOMBRAX: Operación Punto Ciego - App de Android
 ================================================
 
 ARCHIVOS
-- ../zombrax.apk ............ la app lista para instalar en el teléfono (versión 1.5, versionCode 6).
+- ../zombrax.apk ............ la app lista para instalar en el teléfono (versión 1.6, versionCode 7).
 - zombrax.keystore .......... llave con la que se firma la app. ¡NO LA PIERDAS!
                               Cada versión nueva debe firmarse con esta misma llave
                               para instalarse como actualización encima de la anterior.
